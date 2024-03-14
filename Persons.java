@@ -1,5 +1,6 @@
 import java.time.Year;
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Scanner;
 
 // Read persons, read a name to replace, print in tabular form, print average salary.
@@ -31,7 +32,7 @@ final class PersonBuilder {
         return this;
     }
     Person build() {
-        return new Person(name, birthYear, salary);
+        return new Person(Objects.requireNonNull(name), Objects.requireNonNull(birthYear), Objects.requireNonNull(salary));
     }
 }
 public class Persons {
